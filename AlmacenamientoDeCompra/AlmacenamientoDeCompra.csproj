@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6329DA97-2D9A-4A9B-BE17-FB24DE76D331}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlmacenamientoDeCompra</RootNamespace>
+    <AssemblyName>AlmacenamientoDeCompra</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas\ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ayuda.Designer.cs">
+      <DependentUpon>ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProducto.Designer.cs">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaSuplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaSuplidor.Designer.cs">
+      <DependentUpon>ConsultaSuplidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Utilizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Utilizacion.Designer.cs">
+      <DependentUpon>Utilizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\CompraCompleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\CompraCompleta.Designer.cs">
+      <DependentUpon>CompraCompleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\consultaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\consultaCompra.Designer.cs">
+      <DependentUpon>consultaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ComprasReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ComprasReporte.Designer.cs">
+      <DependentUpon>ComprasReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProductosReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ProductosReporte.Designer.cs">
+      <DependentUpon>ProductosReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteCompra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCompra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSuplidor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteSuplidor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\SuplidorReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\SuplidorReporte.Designer.cs">
+      <DependentUpon>SuplidorReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\Suplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\Suplidor.Designer.cs">
+      <DependentUpon>Suplidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SABADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SABADataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SABADataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Consultas\ayuda.resx">
+      <DependentUpon>ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
+      <DependentUpon>ConsultaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaSuplidor.resx">
+      <DependentUpon>ConsultaSuplidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Utilizacion.resx">
+      <DependentUpon>Utilizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\CompraCompleta.resx">
+      <DependentUpon>CompraCompleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\consultaCompra.resx">
+      <DependentUpon>consultaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\Suplidor.resx">
+      <DependentUpon>Suplidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ComprasReporte.resx">
+      <DependentUpon>ComprasReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ProductosReporte.resx">
+      <DependentUpon>ProductosReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCompra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSuplidor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteSuplidor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\SuplidorReporte.resx">
+      <DependentUpon>SuplidorReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SABADataSet.xsc">
+      <DependentUpon>SABADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet.xss">
+      <DependentUpon>SABADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet1.xsc">
+      <DependentUpon>SABADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet1.xss">
+      <DependentUpon>SABADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet2.xsc">
+      <DependentUpon>SABADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet2.xss">
+      <DependentUpon>SABADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet3.xsc">
+      <DependentUpon>SABADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet3.xss">
+      <DependentUpon>SABADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet4.xsc">
+      <DependentUpon>SABADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet4.xss">
+      <DependentUpon>SABADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet5.xsc">
+      <DependentUpon>SABADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet5.xss">
+      <DependentUpon>SABADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet6.xsc">
+      <DependentUpon>SABADataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet6.xss">
+      <DependentUpon>SABADataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet7.xsc">
+      <DependentUpon>SABADataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet7.xss">
+      <DependentUpon>SABADataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet8.xsc">
+      <DependentUpon>SABADataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet8.xss">
+      <DependentUpon>SABADataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet9.xsc">
+      <DependentUpon>SABADataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SABADataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SABADataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SABADataSet9.xss">
+      <DependentUpon>SABADataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{43d2bdef-5ee6-4212-96da-1a6fa2ccf500}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-relajante-268384.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cutlery-silhouette-icons-pattern-background-26095972.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\en-el-interior--de-fondo--comer--la-comida_3345432.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-illustration-10395268-restaurant-pattern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COMIDA AROMATICA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurante-fondo-de-comercio-18095-MLA20148594294_082014-F.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comida-china-para-llevar-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COMIDA AROMATICA1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\402528_korziny_produkty_butylki_frukty_yajca_xleb_vino_ka_1680x1050_%28www.GdeFon.ru%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC_0455-600x399.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
